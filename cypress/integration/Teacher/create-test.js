@@ -7,7 +7,7 @@ context('Teacher- Create Test', () => {
     cy.get('mat-icon').contains('menu').click()
     cy.get(".create-test").eq(0).click()
     //Enter Test name
-    cy.get(".form-pad").eq(0).clear().type("Mathematics Test1",{force:true})
+    cy.get(".form-pad").eq(0).clear().type("Science Test1",{force:true})
     //Uncheck checkboxes
     cy.get("input[type='checkbox']").eq(9).uncheck()
     cy.get("input[type=checkbox]").eq(10).uncheck()
@@ -15,7 +15,7 @@ context('Teacher- Create Test', () => {
     //Select Boar,Grade and subject
     cy.get("select[formcontrolname=board]").select("CBSE")
     cy.get("select[formcontrolname=grade]").select("Ninth Grade - IX")
-    cy.get("select[formcontrolname=subject]").select("Mathematics")
+    cy.get("select[formcontrolname=subject]").select("Science")
     //Select Total number of questions
     cy.get("select[formcontrolname=totalques]").select("5")
     cy.get("button.next").eq(0).click()
@@ -36,7 +36,7 @@ context('Teacher- Create Test', () => {
     })
     //click on Next button
     cy.get("button.next").eq(0).click({force:true})
-    cy.contains('Mathematics Test1').should('be.visible')
+    cy.contains('Science Test1').should('be.visible')
     //click on Done button
     cy.get("button.next").contains('Done').click({force:true})
     })
