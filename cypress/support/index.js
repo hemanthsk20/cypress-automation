@@ -108,5 +108,6 @@ beforeEach(() => {
 })
 afterEach(function () {
     cy.get('.profile-pic').click({force:true});
+    cy.wait(1000)
     cy.contains("Logout").click({force:true});
 })
